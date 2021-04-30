@@ -9,7 +9,5 @@ namespace BroadwaysApiInterface.Service
     public interface IRegisteredService
     {
         Task RegisterAsync(ApplicationUser model);
-        Task GetRegisteredUser();
-
-          }
+    }
 }

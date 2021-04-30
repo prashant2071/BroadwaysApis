@@ -22,16 +22,17 @@ namespace BroadwaysApiInterface.Implementation
             _secret = Encoding.ASCII.GetBytes(jwtTokenConfig.Secret);
         }
 
+
         public AuthResultant GenerateTokens(string username, Claim[] claims, DateTime now)
         {
 
             var audienceClaim = string.IsNullOrWhiteSpace(claims?.FirstOrDefault(x => x.Type == JwtRegisteredClaimNames.Aud)?.Value);
-            var jwtToken = new JwtSecurityToken(
+            var jwtToken = new JwtSecurityToken( 
                 _jwtTokenConfig.Issuer,
                 audienceClaim ? _jwtTokenConfig.Audience : string.Empty,
                 claims,
                 expires: now.AddMinutes(_jwtTokenConfig.AccessTokenExpiration));
-
+            //this JwtSecurityTokenHandler create the the token
             var accessToken = new JwtSecurityTokenHandler().WriteToken(jwtToken);
 
             var refreshToken = new RefreshToken
@@ -53,5 +54,7 @@ namespace BroadwaysApiInterface.Implementation
             randomNumberGenerator.GetBytes(randomNumber);
             return Convert.ToBase64String(randomNumber);
         }
+
+   
     }
 }

@@ -24,11 +24,5 @@ namespace BroadwaysApiInterface.Implementation
         }
 
 
-        public async Task GetRegisteredUser()
-        {
-            await _context.ApplicationUser.ToListAsync();
-            
-        }
-
     }
 }

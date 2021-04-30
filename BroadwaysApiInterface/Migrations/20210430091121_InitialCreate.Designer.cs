@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BroadwaysApiInterface.Migrations
 {
     [DbContext(typeof(EfContext))]
-    [Migration("20210428104054_InitialCreate")]
+    [Migration("20210430091121_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
