@@ -9,5 +9,12 @@ namespace BroadwaysApiInterface.Service
     public interface IRegisteredService
     {
         Task RegisterAsync(ApplicationUser model);
+         IEnumerable<ApplicationUser> GetAllUser();
+        ApplicationUser GetUserById(int id);
+        void UpdateUserById(int id,ApplicationUser model);
+        void DeleteUserById(int id);
+
+        
+
     }
 }

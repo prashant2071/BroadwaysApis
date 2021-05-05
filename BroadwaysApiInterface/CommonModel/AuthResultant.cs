@@ -7,12 +7,12 @@ namespace BroadwaysApiInterface.CommonModel
 {
     public class AuthResultant
     {
-     
-
-            public string AccessToken { get; set; }
 
 
-            public RefreshToken RefreshToken { get; set; }
-        
+        public string AccessToken { get; set; }
+
+
+        public RefreshToken RefreshToken { get; set; }
+
     }
 }

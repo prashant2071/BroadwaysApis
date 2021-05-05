@@ -9,7 +9,7 @@ namespace BroadwaysApiInterface.CommonModel
 {
     public class User
     {
-    
+
         [Required]
 
         public string UserName { get; set; }
